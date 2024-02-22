@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+     th{
+        text-align: center;
+        background-color: rgba(210, 30, 210, 0.304);
+        border-radius: 1rem;
+     }
+     th,td{
+        width: 30px;
+        margin-top: 5px;
+        text-align: center;
+        
+     }
+     td{
+        background-color: rgba(201, 30, 210, 0.174);
+        /* border: 1px solid black; */
+        border-radius: 1rem;
+     }
+     table{
+        margin: auto;
+        width: 500px;
+        border-spacing: 30px;        /* padding: 10px; */
+     }
+     body{
+        background-color: rgba(192, 30, 210, 0.304);
+        /* background-image: url("/projects/Health/hand-removebg-preview.png"); */
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 500px 500px;
+     }
+     /* button:{
+        background-color:black;
+     } */
+    </style>
+</head>
+<body>
+    <br><br><br>
+    <table >
+        <tr>
+            <th colspan="10">How do you feel right now?</th>
+        </tr>
+        <tr>
+            <td colspan="5"><button class="btn" onclick="calc(1)">Gloomy</button></td>
+            <td colspan="5"><button class="btn" onclick="calc(2)">Grumpy</button></td>
+            
+        </tr>
+        <tr>
+            <td colspan="5"><button class="btn" onclick="calc(3)">Cheerful</button></td>
+            <td colspan="5"><button class="btn" onclick="calc(4)">Over the Moon
+            </button></td>
+        </tr>
+        </table><br><br>
+        <table>
+        <tr>
+            <th colspan="10">Did you participate in any outdoor sport today?</th>
+        </tr>
+        <tr>
+            <td colspan="5"><button class="btn" onclick="calc(1)">Nah</button></td>
+            <td colspan="5"><button class="btn" onclick="calc(2)">Yup, for around 30 minutes</button></td>
+            
+        </tr>
+        <tr>
+            <td colspan="5"><button class="btn" onclick="calc(3)">For around 1 hour</button></td>
+            <td colspan="5"><button class="btn" onclick="calc(4)">For more than an hour</button></td>
+        </tr>
+        </table><br><br>
+        <table>
+        <tr>
+            <th colspan="10">How does your body feel today?</th>
+        </tr>
+        <tr>
+            <td colspan="5"><button class="btn" onclick="calc(1)">Exhausted</button></td>
+            <td colspan="5"><button class="btn" onclick="calc(2)">I feel drowsy</button></td>
+            
+        </tr>
+        <tr>
+            <td colspan="5"><button class="btn" onclick="calc(3)">Neutral</button></td>
+            <td colspan="5"><button class="btn" onclick="calc(4)">I feel rather refreshed</button></td>
+        </tr>
+        </table><br><br>
+        <table>
+        <tr>
+            <th colspan="10">How often do you exercise?</th>
+        </tr>
+        <tr>
+            <td colspan="5"><button class="btn" onclick="calc(1)">Never</button></td>
+            <td colspan="5"><button class="btn" onclick="calc(2)">Once a week</button></td>
+            
+        </tr>
+        <tr>
+            <td colspan="5"><button class="btn" onclick="calc(3)">3-4 times a week</button></td>
+            <td colspan="5"><button class="btn" onclick="calc(4)">Daily, I am extremely disciplined</button></td>
+        </tr>
+        </table><br><br>
+        <table>
+        <tr>
+            <th colspan="10">What do you do when you are distressed?</th>
+        </tr>
+        <tr>
+            <td colspan="5"><button class="btn" onclick="calc(1)">Play a video game</button></td>
+            <td colspan="5"><button class="btn" onclick="calc(2)">I talk to my friends and family</button></td>
+            
+        </tr>
+        <tr>
+            <td colspan="5"><button class="btn" onclick="calc(3)">Perform an activity that I enjoy</button></td>
+            <td colspan="5"><button class="btn" onclick="calc(4)">Meditate</button></td>
+        </tr>
+    </table><br><br>
+    <table>
+        <tr>
+            <th colspan="10">How effective are these activities in relieving your stress?</th>
+        </tr>
+        <tr>
+            <td colspan="5"><button class="btn" onclick="calc(1)">Extremely useful</button></td>
+            <td colspan="5"><button class="btn" onclick="calc(2)">Useful to only an extent</button></td>
+            
+        </tr>
+        <tr>
+            <td colspan="5"><button class="btn" onclick="calc(3)">Totally depends upon the situation</button></td>
+            <td colspan="5"><button class="btn" onclick="calc(4)">Barely useful</button></td>
+        </tr>
+    </table>
+    <br>
+    <p class="text-center"><button class="btn" onclick="sendData()">Submit</button></p>
+    <script>
+        let i=0;
+        // function calc(x){
+        //     let a=[];
+        //     let a[i]=x;
+        //     i++;
+        // }
+        function sendData() {
+            // let fin=a[0];
+            var data = {answer:20}; // Sample data
+            var queryString = new URLSearchParams(data).toString();
+            window.location.href = "Reports.html?" + queryString;
+        }
+    //     const dummyData = {
+    //     totalUsers: 1000,
+    //     totalOrders: 5000,
+    //     averageOrderValue: 75
+    // };
+
+    // Function to update statistics
+    
+    </script>
+</body>
+</html>

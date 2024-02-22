@@ -1,0 +1,59 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function option(x){
+            if(x==1){
+                
+            }
+            if(x==2){
+
+            }
+            if(x==3){
+
+            }
+            if(x==4){
+
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <div class="">
+        <p>Lets Begin the Quiz</p>
+        <a href="quiz.html">click</a>
+    </div>
+    
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Send Data Example</title>
+<script>
+    let a = []; // Define an array to store values
+
+    function calc(x) {
+        a.push(x); // Store the value in the array
+    }
+
+    function sendData() {
+        let fin = a; // Retrieve the first value from the array
+        var data = { answer: fin }; // Prepare data object
+        var queryString = new URLSearchParams(data).toString(); // Convert data to query string
+        window.location.href = "Reports.html?" + queryString; // Redirect to Reports.html with query string
+    }
+</script>
+</head>
+<body>
+<button onclick="calc(10)">Add 10</button>
+<button onclick="calc(20)">Add 20</button>
+<button onclick="sendData()">Send Data</button>
+</body>
+</html>

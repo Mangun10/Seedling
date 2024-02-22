@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<title>Statistics Page</title>
+<style>
+    /* Basic styling */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: rgba(43, 202, 194, 0.666);
+    }
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: rgba(43, 202, 194, 0.729);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        
+    }
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+    #statistics {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-gap: 20px;
+        margin-top: 20px;
+    }
+    .statistic {
+        background-color: rgb(245, 222, 179);
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 20px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+    .statistic:hover {
+        transform: translateY(-5px);
+    }
+    .statistic h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        color: #333;
+    }
+    .statistic p {
+        font-size: 24px;
+        /* font-weight: bold; */
+        /* color: #007bff; */
+        margin: 0;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1 class="Display-5">Report</h1>
+    <div id="statistics">
+        <div class="statistic" id="Health">
+            <!-- <h2>Health Index</h2> -->
+            <p id="totalUsersCount" class="text-center Display-1">0</p>
+        </div>
+        <!-- Add more statistics as needed -->
+    </div>
+</div>
+<!-- <h1>Receiving Page</h1> -->
+    <!-- <div id="dataDisplay"></div> -->
+<script>
+    
+    // Function to update statistics
+    function updateStatistics(tot) {
+
+        if(tot>18&&tot<=30){
+            document.getElementById('totalUsersCount').innerHTML="You’re on the right path! Keep going!";
+        }
+        if(tot>12&&tot<=18){
+            document.getElementById('totalUsersCount').innerHTML="You might be in the second gear, but trust us and spring upon a joyous path";
+
+        }
+        if(tot>7&&tot<=12){
+            document.getElementById('totalUsersCount').innerHTML="I’ll be there for you when the rain starts to pour! Trust your family and friends and you are good to go!";
+
+        }
+        document.getElementById
+    }
+
+
+    // Update statistics with data
+   
+        var queryString = window.location.search;
+        var urlParams = new URLSearchParams(queryString);
+        var answer = urlParams.get('answer');
+        
+        let a=parseInt(answer);
+    //    alert(a);
+    //     document.getElementById('dataDisplay').innerHTML = a;
+        updateStatistics(a);
+</script>
+
+</body>
+</html>

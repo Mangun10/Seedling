@@ -1,0 +1,90 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multiple Choice Quiz</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: rgba(220, 11, 11, 0.475);
+    }
+    .c1{
+        margin-top:270px;
+    }
+    a{
+            transition: 1s;
+        }
+        a:hover{
+            font-size: larger;
+
+        }
+</style>
+</head>
+<body>
+    <p class="display-3 text-center c1"><a href="games.html" class="text-dark" style="text-decoration: none;">Playful? Let's Play!!</a></p>
+<!-- <h1>Multiple Choice Quiz</h1>
+<div id="quiz"></div>
+<button id="submit">Submit</button>
+<p id="result"></p>
+
+<script>
+    const quizData = [
+        {
+            question: "What is the capital of France?",
+            options: ["Paris", "London", "Berlin", "Madrid"],
+            answer: "Paris"
+        },
+        {
+            question: "What is 2 + 2?",
+            options: ["3", "4", "5", "6"],
+            answer: "4"
+        },
+        {
+            question: "Which planet is known as the Red Planet?",
+            options: ["Mars", "Venus", "Jupiter", "Saturn"],
+            answer: "Mars"
+        }
+    ];
+
+    const quizContainer = document.getElementById('quiz');
+    const submitButton = document.getElementById('submit');
+    const resultContainer = document.getElementById('result');
+
+    function buildQuiz() {
+        const output = [];
+
+        quizData.forEach((questionData, index) => {
+            const questionElement = `<div class="question"> ${index + 1}. ${questionData.question} </div>`;
+            const optionsElement = questionData.options.map(option => `<label><input type="radio" name="question${index}" value="${option}"> ${option}</label><br>`).join('');
+
+            output.push(questionElement);
+            output.push(optionsElement);
+        });
+
+        quizContainer.innerHTML = output.join('');
+    }
+
+    function showResult() {
+        const answerContainers = quizContainer.querySelectorAll('input[type="radio"]:checked');
+        let score = 0;
+
+        answerContainers.forEach((answerContainer, index) => {
+            if (answerContainer.value === quizData[index].answer) {
+                score++;
+            }
+        });
+
+        resultContainer.innerHTML = `You scored ${score} out of ${quizData.length}`;
+    }
+
+    buildQuiz();
+
+    submitButton.addEventListener('click', showResult);
+</script> -->
+</body>
+</html>

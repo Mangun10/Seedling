@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>        
+    </head>
+    <style>
+        .bigbox1{
+    position: absolute;
+    display:flex;
+    flex-direction: row;
+    width:65%;
+    top:12%;
+    left:15%;
+    height:15%;
+    justify-content: space-evenly;
+    margin-left: 10px;
+
+}
+.bigbox2{
+    position: absolute;
+    display:flex;
+    flex-direction: row;
+    width:65%;
+    top:35%;
+    left:15%;
+    height:45%;
+    justify-content: space-evenly;
+
+}
+.students{
+   background-color: aliceblue;
+   border-radius: 1rem;
+   height:30%;
+   width:25%;
+   text-align: center;
+
+}
+
+ #s{
+    
+    height:45%;
+    width:25%;
+    border: 1px solid black;
+    text-align: center;
+
+ }
+
+body{
+    background-color: rgba(205, 205, 22, 0.607);
+}
+div{
+    margin-left: 10px;
+}
+    </style>
+    <body>
+        <div class="bigbox1 align-items-around">
+            <div class="students">
+                Parent's Feedback
+            </div>
+            <div class="students">
+                Teacher's Feedback
+            </div>
+            <div class="students">
+                Student's Feedback
+            </div>
+        </div>
+        <div class="bigbox2 align-items-around">
+            <div class="pC">
+                <input type="text" name="s" placeholder="Parent's Comment">
+            </div>
+            <div class="tC">
+                <input type="text" name="s" placeholder="Teacher's Comment">
+            </div>
+            <div class="sC">
+                <input type="text" name="s" placeholder="Student's Comment">
+            </div>
+
+        </div>
+    </body>
+</html>
